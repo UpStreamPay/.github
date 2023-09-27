@@ -1,8 +1,8 @@
 ---
 name: "[DevSecOps] Bug report"
 about: Utilisez ce modèle pour signaler un bug lié à l'infrastructure DevOps
-title: "[BUG] [DevOps]"
-labels: ''
+title: "[BUG]"
+labels: BUG, DevSecOps
 assignees: Hugo-Dautricourt, Revocsid
 
 ---

@@ -1,9 +1,9 @@
 ---
 name: "[DevSecOps] R&D"
 about: Utilisez ce modèle pour documenter vos recherche R&D
-title: ''
-labels: ''
-assignees: ''
+title: "[R&D]"
+labels: DevSecOps
+assignees: Hugo-Dautricourt
 
 ---
 

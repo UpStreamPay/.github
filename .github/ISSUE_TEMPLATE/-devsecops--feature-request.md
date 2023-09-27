@@ -1,9 +1,9 @@
 ---
 name: "[DevSecOps] Feature request"
 about: Utilisez ce modèle pour demander une nouvelle feature
-title: ''
-labels: ''
-assignees: ''
+title: "[FEAT]"
+labels: DevSecOps, FEAT
+assignees: Hugo-Dautricourt, Revocsid
 
 ---
 
