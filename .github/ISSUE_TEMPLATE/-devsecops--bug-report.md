@@ -3,7 +3,7 @@ name: "[DevSecOps] Bug report"
 about: Utilisez ce modèle pour signaler un bug lié à l'infrastructure DevOps
 title: "[BUG]"
 labels: BUG, DevSecOps
-assignees: Revocsid, Hugo-Dautricourt
+assignees: Hugo-Dautricourt, Revocsid
 
 ---
 
