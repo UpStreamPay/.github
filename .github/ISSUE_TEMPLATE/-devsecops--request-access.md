@@ -3,7 +3,7 @@ name: "[DevSecOps] Request Access"
 about: Describe this issue template's purpose here.
 title: "[Access Request] Requesting {Resource Type} Access for {Your Name/Team}"
 labels: DevSecOps
-assignees: Revocsid, DaGoodBoiii, Hugo-Dautricourt
+assignees: Revocsid, Hugo-Dautricourt
 
 ---
 
