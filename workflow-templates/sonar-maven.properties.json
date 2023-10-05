@@ -1,0 +1,7 @@
+{
+  "name": "SonarQube Maven workflow",
+  "description": "Simple Workflow to run SonarQube analysis on Maven projects",
+  "iconName": "octicon rss",
+  "categories": ["SonarQube", "Maven"],
+  "filePatterns": ["pom.xml$"]
+}

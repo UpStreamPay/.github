@@ -1,0 +1,37 @@
+name: Sonar Analysis
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  get-project-key:
+    runs-on: ubuntu-latest
+    outputs:
+      sonar_project_key: ${{ steps.set_key.outputs.SONAR_PROJECT_KEY }}
+    steps:
+      - name: Determine Sonar Project Key
+        id: set_key
+        run: |
+          if [[ -n "${{ vars.SONAR_PROJECT_KEY }}" ]]; then
+            echo "Using provided SONAR_PROJECT_KEY"
+            echo "SONAR_PROJECT_KEY=${{ vars.SONAR_PROJECT_KEY }}" >> $GITHUB_OUTPUT
+          else
+            echo "Using generated SONAR_PROJECT_KEY"
+            echo "SONAR_PROJECT_KEY=${{ github.repository_owner }}_${{ github.event.repository.name }}" >> $GITHUB_OUTPUT
+          fi
+
+  analyse:
+    needs: get-project-key
+    uses: UpStreamPay/usp-reusable-workflows/.github/workflows/sonar-maven.yaml@v1
+    with:
+      sonar_project_key: ${{ needs.get-project-key.outputs.sonar_project_key }}
+      workload-identity-provider: ${{ vars.GCP_PROD_WORKLOAD_IDENTITY_PROVIDER }}
+      pull-service-account: ${{ vars.GCP_PROD_MAVEN_REGISTRY_SA_EMAIL }}
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      PLUGIN_D4_USERNAME: ${{ secrets.PLUGIN_D4_USERNAME }}
+      PLUGIN_D4_PASSWORD: ${{ secrets.PLUGIN_D4_PASSWORD }}
