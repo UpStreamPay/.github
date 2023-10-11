@@ -1,0 +1,7 @@
+{
+  "name": "Linter Javascript workflow",
+  "description": "Simple Workflow to run a linter on javascript project",
+  "iconName": "octicon codescan-checkmark",
+  "categories": ["Javascript", "Linter"],
+  "filePatterns": ["package.json$"]
+}

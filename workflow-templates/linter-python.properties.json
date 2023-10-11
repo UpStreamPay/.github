@@ -1,0 +1,6 @@
+{
+  "name": "Linter Python workflow",
+  "description": "Simple Workflow to run a linter on python project and other",
+  "iconName": "octicon codescan-checkmark",
+  "categories": ["Python", "Linter"]
+}
